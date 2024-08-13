@@ -9,22 +9,6 @@ use App\Models\Game;
 
 class GameController extends Controller
 {
-    public function __construct()
-    {
-        Event::listen(BuildingMenu::class, function (BuildingMenu $event) {
-            \Log::info('BuildingMenu event triggered');
-            $games = Game::all();
-            \Log::info('Games fetched: ', $games->toArray());
-            foreach ($games as $game) {
-                $event->menu->addIn('games_header', [
-                    'text' => "$game->name",
-                    'url' => route('admin.game.show', $game->id),
-                    'icon' => 'fas fa-fw fa-gamepad',
-                ]);
-            }
-        });
-    }
-
     public function index()
     {
         return view('admin.game.index');
