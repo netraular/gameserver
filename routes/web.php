@@ -11,7 +11,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/', [ServerController::class, 'index']);
 
-Route::get('/admin/games', [GameController::class, 'index'])->name('admin.games.index');
 Route::get('/admin/game/{id}', [GameController::class, 'show'])->name('games.edit');
 
 Route::get('/games/create', [GameController::class, 'create'])->name('games.create');
