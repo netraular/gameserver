@@ -68,6 +68,14 @@ class BuildSidebarMenu
                 'url' => route('games.create'),
                 'icon' => 'fas fa-fw fa-plus',
             ]);
+
+            // Add the company link at the bottom of the sidebar
+            $event->menu->add([
+                'text' => config('app.APP_NAME', 'Netshiba'),
+                'url' => config('app.APP_URL', 'https://netshiba.com'),
+                'icon' => 'fas fa-fw fa-link',
+                'classes_body' => 'sidebar-footer',
+            ]);
         });
 
         return $next($request);

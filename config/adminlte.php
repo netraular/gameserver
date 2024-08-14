@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Game Server',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -299,6 +299,10 @@ return [
             'type' => 'navbar-search',
             'text' => 'search',
             'topnav_right' => true,
+        ],
+        [
+            'header' => 'account_settings',
+            'classes' => 'sidebar-footer text-yellow text-bold text-center',
         ],
         // Sidebar items:
         [
