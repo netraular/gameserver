@@ -74,7 +74,7 @@ class BuildSidebarMenu
                 'text' => config('app.APP_NAME', 'Netshiba'),
                 'url' => config('app.APP_URL', 'https://netshiba.com'),
                 'icon' => 'fas fa-fw fa-link',
-                'classes_body' => 'sidebar-footer',
+                'classes' => 'sidebar-footer',
             ]);
         });
 
